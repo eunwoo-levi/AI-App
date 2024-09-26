@@ -1,3 +1,5 @@
+import GithubSignIn from "@/components/GithubSignIn";
+import GoogleSignIn from "@/components/GoogleSignIn";
 import React from "react";
 
 export default function RegisterPage() {
@@ -14,6 +16,10 @@ export default function RegisterPage() {
             <label>* password</label>
           </div>
         </form>
+        <section className="flex flex-col gap-[5px] mt-[50px]">
+          <GithubSignIn />
+          <GoogleSignIn />
+        </section>
       </div>
     </main>
   );
