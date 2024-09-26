@@ -1,3 +1,39 @@
+<AI 기반 프로젝트>
+
+## <프레임 워크>
+**프론트엔드**
+- Next.js (typescript)
+
+**백엔드**
+- Mongoose, MongoDB
+
+<br/>
+
+## <CSS 라이브러리>
+- tailwind
+
+<br/>
+
+## <상태관리 라이브러리>
+- Zustand
+
+<br/>
+
+## <기타 라이브러리>
+- bcryptjs
+
+<br/>
+
+***
+
+## 회원가입, 로그인
+**AuthJS (NextAuth) 사용**
+- Credential, Github , Google 로그인 기능
+
+
+
+***
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
