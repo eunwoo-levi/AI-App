@@ -1,25 +1,23 @@
-import GithubSignIn from "@/components/GithubSignIn";
-import GoogleSignIn from "@/components/GoogleSignIn";
+import GithubSignIn from "@/components/auth/GithubSignIn";
+import GoogleSignIn from "@/components/auth/GoogleSignIn";
+import RegisterForm from "@/components/auth/RegisterForm";
+import Link from "next/link";
 import React from "react";
 
 export default function RegisterPage() {
   return (
-    <main className="w-full min-h-screen flex justify-center items-center">
-      <div className="border border-blue-500 p-[80px] rounded-2xl shadow-md shadow-blue-300">
-        <h1 className="text-[30px] font-semibold mb-[80px]">Register</h1>
-        <form className="flex flex-col gap-[20px]">
-          <div className="flex flex-col">
-            <label>* Email</label>
-            <input placeholder="yourEmail@example.com" />
-          </div>
-          <div>
-            <label>* password</label>
-          </div>
-        </form>
-        <section className="flex flex-col gap-[5px] mt-[50px]">
-          <GithubSignIn />
-          <GoogleSignIn />
-        </section>
+    <main className="w-full flex flex-col items-center pt-[10px] lg:pt-[40px]">
+      <div className="w-[480px] flex flex-col items-center border border-blue-500 p-[20px] rounded-xl shadow-md shadow-blue-300">
+        <h1 className="text-[40px] font-bold mb-[40px] text-blue-700">
+          Register
+        </h1>
+        <RegisterForm />
+        <div className="flex gap-[10px] mt-[20px]">
+          <p>Already have an account?</p>
+          <Link href="/login" className="text-blue-500 font-semibold underline">
+            Login
+          </Link>
+        </div>
       </div>
     </main>
   );
