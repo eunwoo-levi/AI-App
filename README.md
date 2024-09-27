@@ -44,9 +44,35 @@
 쿠키에 저장: <br/>
 세션 정보는 클라이언트에 쿠키 형태로 저장됩니다. 이 쿠키는 브라우저에 의해 관리되며, 사용자가 페이지를 새로 고침하거나 다른 페이지로 이동할 때 자동으로 전송됩니다.정
 
-![Uploading chatbot-test-1.png…]()
+
+## Chatbot
+
+<웹 화면>
+![chatbot-test-2](https://github.com/user-attachments/assets/9951f29b-483b-4849-8de0-0d1599674e0e)
+
+<모바일 화면>
+![chatbot-test-1 2](https://github.com/user-attachments/assets/406af46c-3da5-44e9-8f7f-88aed67556a1)
+
+
+
+
+
+
+
+
 
 ***
+
+
+
+
+
+
+
+
+
+
+
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
