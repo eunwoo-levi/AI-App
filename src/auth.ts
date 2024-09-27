@@ -23,7 +23,8 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         const user = await User.findOne({ email });
 
         if (user && (await bcrypt.compare(password, user.password))) {
-          return { id: user._id, name: user.name, email: user.email }; // 사용자 정보를 반환
+          // 세션에 사용자 정보를 반환 (user - _id, name, email) !!
+          return { id: user._id, name: user.name, email: user.email };
         } else {
           throw new Error("Invalid email or password");
         }

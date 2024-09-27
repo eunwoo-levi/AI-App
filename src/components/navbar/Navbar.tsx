@@ -2,7 +2,7 @@ import Link from "next/link";
 import LoginNav from "./LoginNav";
 
 const linkClassName =
-  "text-[18px] font-bold hover:bg-neutral-200 rounded-lg p-[8px]";
+  "text-[18px] font-bold hover:bg-neutral-300 rounded-lg p-[8px]";
 
 export default function Navbar() {
   return (
@@ -13,8 +13,11 @@ export default function Navbar() {
         </Link>
       </div>
       <div>
+        <Link href="/about" className={linkClassName}>
+          About
+        </Link>
         <Link href="/chatbot" className={linkClassName}>
-          챗봇
+          ChatBot
         </Link>
       </div>
       <LoginNav />

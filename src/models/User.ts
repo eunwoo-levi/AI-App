@@ -1,7 +1,13 @@
 import mongoose, { model, Schema } from "mongoose";
+import { auto } from "openai/_shims/registry.mjs";
 
 const UserSchema = new Schema(
   {
+    _id:{
+      type: mongoose.Schema.Types.ObjectId,
+      auto:true,
+    },
+
     name: {
       type: String,
       required: [true, "Name is required"],
