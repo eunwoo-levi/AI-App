@@ -8,7 +8,6 @@ const labelClassName = "text-[18px] font-bold";
 const inputClassName = "w-[350px] py-[3px] pl-[10px] border rounded-sm";
 
 export default function LoginForm() {
-  const router = useRouter();
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -25,7 +24,6 @@ export default function LoginForm() {
     }
 
     const res = await signIn("credentials", {
-      redirect: false,
       email,
       password,
     });
@@ -33,7 +31,7 @@ export default function LoginForm() {
     if (res?.error) {
       setErrorMessage(res.error);
     } else {
-      router.push("/"); // 로그인 성공 후 홈으로 리다이렉트
+      alert("로그인 성공하였습니다.");
     }
   };
 

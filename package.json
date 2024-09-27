@@ -15,13 +15,13 @@
     "ai": "^3.4.4",
     "axios": "^1.7.7",
     "bcryptjs": "^2.4.3",
-    "mongodb": "^6.9.0",
-    "mongoose": "^8.6.3",
+    "mongoose": "^8.6.4",
     "next": "14.2.13",
     "next-auth": "^5.0.0-beta.21",
     "openai": "^4.65.0",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "socket.io": "^4.8.0"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",

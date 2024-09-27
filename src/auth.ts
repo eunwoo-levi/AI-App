@@ -1,9 +1,10 @@
 import NextAuth from "next-auth";
 import GitHub from "next-auth/providers/github";
 import Google from "next-auth/providers/google";
-import Credentials from "next-auth/providers/credentials"
+import Credentials from "next-auth/providers/credentials";
 import User from "./models/User";
-import bcrypt from "bcryptjs"
+import bcrypt from "bcryptjs";
+import { connectMongoDB } from "./lib/mongodb";
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [
@@ -15,23 +16,27 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
-
         const email = credentials?.email as string;
         const password = credentials?.password as string;
 
-        // 이메일과 비밀번호로 사용자 인증
+        await connectMongoDB()
+
         const user = await User.findOne({ email });
 
-        if (user && (await bcrypt.compare(password, user.password))) {
-          // 세션에 사용자 정보를 반환 (user - _id, name, email) !!
-          return { id: user._id, name: user.name, email: user.email };
+        if (user) {
+          const isPasswordValid = await bcrypt.compare(password, user.password)
+          if(!isPasswordValid){
+            throw new Error("Invalid password")
+          }
+
+          return {  name: user.name, email: user.email };
         } else {
-          throw new Error("Invalid email or password");
+          throw new Error("Invalid email");
         }
       },
     }),
   ],
   pages: {
-    signIn: '/login',  // 로그인 페이지 경로
+    signIn: '/login',
   },
 });
