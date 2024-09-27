@@ -27,7 +27,7 @@ export default function Chat() {
   const scroll = () => {
     const { offsetHeight, scrollHeight, scrollTop } =
       chatContainer.current as HTMLDivElement;
-    if (scrollHeight >= scrollTop + offsetHeight) {
+    if (scrollHeight > scrollTop + offsetHeight) {
       chatContainer.current?.scrollTo(0, scrollHeight + 200);
     }
   };
@@ -72,6 +72,7 @@ export default function Chat() {
           </div>
         )}
       </section>
+      <div className="w-full h-[100px]" />
       <section className="fixed bottom-0 left-0 right-0 p-4 shadow-md flex justify-center bg-neutral-800 bg-opacity-20">
         <form
           onSubmit={handleSubmit}

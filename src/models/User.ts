@@ -1,5 +1,4 @@
 import mongoose, { model, Schema } from "mongoose";
-import { auto } from "openai/_shims/registry.mjs";
 
 const UserSchema = new Schema(
   {
