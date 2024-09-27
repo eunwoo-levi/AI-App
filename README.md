@@ -48,9 +48,13 @@
 ## Chatbot
 
 <웹 화면>
+
 ![chatbot-test-2](https://github.com/user-attachments/assets/9951f29b-483b-4849-8de0-0d1599674e0e)
 
+<br/>
+
 <모바일 화면>
+
 ![chatbot-test-1 2](https://github.com/user-attachments/assets/406af46c-3da5-44e9-8f7f-88aed67556a1)
 
 
@@ -70,7 +74,7 @@
 
 
 
-
+<br/><br/><br/><br/><br/><br/>
 
 
 
