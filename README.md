@@ -24,7 +24,7 @@
 <br/>
 
 ## <기타 라이브러리>
-- bcryptjs
+- bcryptjs ,ai
 
 <br/>
 
