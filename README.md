@@ -1,4 +1,5 @@
 # < FullStack AI 기반 프로젝트 >
+진행중..
 
 <br/><br/>
 
