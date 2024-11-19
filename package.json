@@ -20,8 +20,7 @@
     "next-auth": "^5.0.0-beta.21",
     "openai": "^4.65.0",
     "react": "^18",
-    "react-dom": "^18",
-    "socket.io": "^4.8.0"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
