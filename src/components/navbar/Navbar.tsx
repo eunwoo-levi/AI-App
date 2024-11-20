@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import LoginNav from './LoginNav';
 
-const linkClassName = 'text-[18px] font-bold hover:bg-neutral-300 rounded-lg p-[8px]';
+const linkClassName = 'text-[18px] font-bold hover:bg-neutral-200 rounded-lg px-[10px] py-[5px] transform duration-300';
 
 export default function Navbar() {
   return (
@@ -17,6 +17,9 @@ export default function Navbar() {
         </Link>
         <Link href='/chatbot' className={linkClassName}>
           ChatBot
+        </Link>
+        <Link href='/ai-image' className={linkClassName}>
+          AI Image
         </Link>
       </div>
       <LoginNav />
