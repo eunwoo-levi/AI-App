@@ -1,4 +1,4 @@
-import { auth } from '@/auth';
+import { auth } from '@/app/auth';
 import GithubSignIn from '@/components/auth/GithubSignIn';
 import GoogleSignIn from '@/components/auth/GoogleSignIn';
 import LoginForm from '@/components/auth/LoginForm';

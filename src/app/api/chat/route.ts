@@ -1,6 +1,6 @@
 import { connectMongoDB } from '@/lib/mongodb';
 import { Chat } from '@/models/chat';
-import { auth } from '@/auth';  
+import { auth } from '@/app/auth';  
 
 export async function GET() {
   const session = await auth();
