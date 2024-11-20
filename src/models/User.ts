@@ -1,6 +1,6 @@
-import mongoose, { model, Schema } from "mongoose";
+import mongoose from "mongoose";
 
-const UserSchema = new Schema(
+const userSchema = new mongoose.Schema(
   {
 
     name: {
@@ -24,5 +24,4 @@ const UserSchema = new Schema(
   }
 );
 
-const User = mongoose.models?.User || model("User", UserSchema);
-export default User;
+export const User = mongoose.models.User || mongoose.model('Chat', userSchema);
