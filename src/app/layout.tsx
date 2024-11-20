@@ -3,6 +3,7 @@ import './globals.css';
 import Navbar from '@/components/navbar/Navbar';
 import { SessionProvider } from 'next-auth/react';
 import '@fontsource/roboto/400.css';
+import AuthProvider from '@/components/auth/AuthProvider';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -17,8 +18,10 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className='font-roboto'>
-        <Navbar />
-        <SessionProvider>{children}</SessionProvider>
+        <AuthProvider>
+          <Navbar />
+          {children}
+        </AuthProvider>
       </body>
     </html>
   );
