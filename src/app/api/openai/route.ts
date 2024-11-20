@@ -1,36 +1,41 @@
 import { openai } from '@ai-sdk/openai';
 import { streamText, convertToCoreMessages, StreamData } from 'ai';
-
-// Allow streaming responses up to 30 seconds
-export const maxDuration = 30;
+import { Message } from 'ai/react';
 
 export const runtime = 'edge';
+export const maxDuration = 30;
 
 export async function POST(req: Request) {
+  const data = new StreamData();
+  
   try {
-    const { messages } = await req.json();
-
     if (!process.env.OPENAI_API_KEY) {
-      throw new Error('OPENAI_API_KEY is not set');
+      throw new Error('OpenAI API key is not configured');
     }
 
-    const data = new StreamData();
-    data.append({ test: 'value' });
-
+    const { messages } = await req.json() as { messages: Message[] };
+    
     const result = await streamText({
       model: openai('gpt-3.5-turbo'),
       messages: convertToCoreMessages(messages),
+      temperature: 0.9,
       onFinish() {
         data.close();
       },
     });
-
+    
     return result.toDataStreamResponse({ data });
+
   } catch (error) {
     console.error('Error in OpenAI route:', error);
-    return new Response(JSON.stringify({ error: 'An error occurred' }), {
-      status: 500,
-      headers: { 'Content-Type': 'application/json' }
-    });
+    data.close();
+    
+    return new Response(
+      JSON.stringify({ error: error instanceof Error ? error.message : 'An error occurred' }), 
+      { 
+        status: 500, 
+        headers: { 'Content-Type': 'application/json' }
+      }
+    );
   }
 }

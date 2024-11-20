@@ -14,13 +14,15 @@ export default function LoginNav() {
         <div className='flex items-center'>
           <span className='text-[16px] font-semibold mr-[20px] flex items-center gap-2'>
             <h1>{session.user?.name} 님</h1>
-            <Image
-              src={session.user?.image || ''}
-              alt='profile-image'
-              width={33}
-              height={33}
-              className='rounded-full'
-            />
+            {session.user?.image && (
+              <Image
+                src={session.user?.image || ''}
+                alt='profile-image'
+                width={33}
+                height={33}
+                className='rounded-full'
+              />
+            )}
           </span>
           <SignOutButton />
         </div>

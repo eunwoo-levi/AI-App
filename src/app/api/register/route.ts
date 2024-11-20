@@ -1,9 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import User from "@/models/User";
+import User from "@/models/user";
 import { connectMongoDB } from "@/lib/mongodb";
 import bcrypt from "bcryptjs";
-
-const uri = process.env.MONGODB_URI;
 
 export const POST = async (req: NextRequest) => {
   try {
