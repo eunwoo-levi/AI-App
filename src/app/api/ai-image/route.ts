@@ -78,7 +78,7 @@ export async function POST(request: Request) {
             { error: errorJson.error || '이미지 생성 실패' },
             { status: error.response.status }
           );
-        } catch (e) {
+        } catch (error) {
           return NextResponse.json(
             { error: '이미지 생성 중 오류가 발생했습니다.' },
             { status: 500 }
