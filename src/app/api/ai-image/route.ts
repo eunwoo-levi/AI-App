@@ -79,6 +79,7 @@ export async function POST(request: Request) {
             { status: error.response.status }
           );
         } catch (error) {
+          console.error('Error parsing response:', error);
           return NextResponse.json(
             { error: '이미지 생성 중 오류가 발생했습니다.' },
             { status: 500 }

@@ -28,9 +28,6 @@ export default function ImageGenerator() {
         { prompt },
         {
           timeout: 120000,
-          headers: {
-            'Content-Type': 'application/json',
-          },
         }
       );
 
