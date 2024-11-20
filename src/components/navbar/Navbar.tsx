@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import LoginNav from './LoginNav';
 import Toggle from './Toggle';
 
 const linkClassName = 'text-[18px] font-bold hover:bg-neutral-200 rounded-lg px-[10px] py-[5px] transform duration-300';
