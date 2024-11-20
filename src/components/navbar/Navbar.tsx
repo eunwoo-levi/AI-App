@@ -18,9 +18,6 @@ export default function Navbar() {
         <Link href='/chatbot' className={linkClassName}>
           ChatBot
         </Link>
-        <Link href='/chat' className={linkClassName}>
-          Chat
-        </Link>
       </div>
       <LoginNav />
     </nav>
