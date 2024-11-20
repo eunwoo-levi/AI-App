@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import LoginNav from './LoginNav';
+import Toggle from './Toggle';
 
 const linkClassName = 'text-[18px] font-bold hover:bg-neutral-200 rounded-lg px-[10px] py-[5px] transform duration-300';
 
@@ -11,7 +12,7 @@ export default function Navbar() {
           LEVI
         </Link>
       </div>
-      <div className='absolute top-4 lg:left-[610px]'>
+      <div className='hidden md:block absolute top-4 md:left-[290px] lg:left-[600px]'>
         <Link href='/about' className={linkClassName}>
           About
         </Link>
@@ -22,7 +23,10 @@ export default function Navbar() {
           AI Image
         </Link>
       </div>
-      <LoginNav />
+
+      <div className='absolute flex items-center md:hidden top-4 right-6'>
+        <Toggle />
+      </div>
     </nav>
   );
 }
