@@ -1,8 +1,7 @@
 import mongoose from "mongoose";
 
-const userSchema = new mongoose.Schema(
+const UserSchema = new mongoose.Schema(
   {
-
     name: {
       type: String,
       required: [true, "Name is required"],
@@ -20,8 +19,8 @@ const userSchema = new mongoose.Schema(
   {
     timestamps: true,
     collection: "register",
-    versionKey: false, // Prevent the creation of the __v field
+    versionKey: false,
   }
 );
 
-export const User = mongoose.models.User || mongoose.model('User', userSchema);
+export const User = mongoose.models.User || mongoose.model('User', UserSchema);

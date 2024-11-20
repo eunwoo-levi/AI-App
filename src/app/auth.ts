@@ -1,10 +1,10 @@
 import NextAuth from "next-auth";
 import Credentials from "next-auth/providers/credentials";
-import { User } from '../models/user';
 import bcrypt from "bcryptjs";
 import { connectMongoDB } from "../lib/mongodb";
 import Google from 'next-auth/providers/google';
 import Github from 'next-auth/providers/github';
+import { User } from '@/models/User';
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [
