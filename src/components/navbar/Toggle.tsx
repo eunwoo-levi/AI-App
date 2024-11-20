@@ -1,11 +1,11 @@
 'use client';
 
 import { Menu } from 'lucide-react';
-import { useSession } from 'next-auth/react';
 import { useState } from 'react';
 import Link from 'next/link';
 import SignOutButton from '../auth/SignOutButton';
 import Image from 'next/image';
+import { useSession } from 'next-auth/react';
 
 const linkClassName =
   'w-full text-center font-bold hover:bg-neutral-200 rounded-lg px-[10px] py-[10px] transform duration-300';
