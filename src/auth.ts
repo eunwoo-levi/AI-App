@@ -1,6 +1,6 @@
 import NextAuth from "next-auth";
 import Credentials from "next-auth/providers/credentials";
-import User from '../src/models/user';
+import { User } from './models/user';
 import bcrypt from "bcryptjs";
 import { connectMongoDB } from "./lib/mongodb";
 import Google from 'next-auth/providers/google';
