@@ -1,6 +1,5 @@
 # < FullStack AI 기반 프로젝트 >
-진행중..
-Community service로 업그레이드 예정
+AI를 이용한 챗봇과 AI 이미지 생성
 
 <br/><br/>
 
